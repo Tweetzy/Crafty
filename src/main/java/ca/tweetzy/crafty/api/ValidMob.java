@@ -17,6 +17,9 @@ public enum ValidMob {
 	TADPOLE(EntityType.TADPOLE, MobBehaviour.PASSIVE, "https://textures.minecraft.net/texture/987035f5352334c2cba6ac4c65c2b9059739d6d0e839c1dd98d75d2e77957847"),
 	ARMADILLO(EntityType.ARMADILLO, MobBehaviour.PASSIVE, "https://textures.minecraft.net/texture/c9c1e96ce985725e22ed6ccf0f4c4810c729a2538b97bda06faeb3b92799c878"),
 
+	NAUTILUS(EntityType.NAUTILUS, MobBehaviour.PASSIVE, "http://textures.minecraft.net/texture/b53d63eb175b00fb35285f4330d0be68a0713db94e00e6fdd85832d41e3a08b"),
+	ZOMBIE_NAUTILUS(EntityType.ZOMBIE_NAUTILUS, MobBehaviour.PASSIVE, "http://textures.minecraft.net/texture/fd9a933376da44c3391307cb9f4cf03f16f3a54f495fd5a11bad8a373f9d5720"),
+
 
 	OCELOT(EntityType.OCELOT, MobBehaviour.PASSIVE, "https://textures.minecraft.net/texture/8c433c1347313b23b67eec92f8807aed2566ec29fd416bdf7a59c22596628355"),
 	MUSHROOM_COW((Bukkit.getServer().getBukkitVersion().contains("1.20.5") || Bukkit.getServer().getBukkitVersion().contains("1.20.6")) ? EntityType.MOOSHROOM : EntityType.valueOf("MUSHROOM_COW"), MobBehaviour.PASSIVE, "https://textures.minecraft.net/texture/d0bc61b9757a7b83e03cd2507a2157913c2cf016e7c096a4d6cf1fe1b8db"),
