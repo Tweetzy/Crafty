@@ -24,9 +24,14 @@ import ca.tweetzy.flight.database.DatabaseConnector;
 import ca.tweetzy.flight.database.SQLiteConnector;
 import ca.tweetzy.flight.gui.GuiManager;
 import ca.tweetzy.flight.utils.Common;
+import co.aikar.taskchain.BukkitTaskChainFactory;
+import co.aikar.taskchain.TaskChain;
+import co.aikar.taskchain.TaskChainFactory;
 import org.bukkit.NamespacedKey;
 
 public final class Crafty extends FlightPlugin {
+
+	private static TaskChainFactory taskChainFactory;
 
 	@SuppressWarnings("FieldCanBeLocal")
 	private DatabaseConnector databaseConnector;
@@ -52,6 +57,7 @@ public final class Crafty extends FlightPlugin {
 		Translations.init();
 
 		Common.setPrefix(Settings.PREFIX.getStringOr("<GRADIENT:3dcf50>&LCrafty</GRADIENT:26d5ed> &8»"));
+		taskChainFactory = BukkitTaskChainFactory.create(this);
 
 		// create name spaced key
 		this.userPlacedBlockKey = new NamespacedKey(this, "CraftyPlacedBlock");
@@ -99,6 +105,11 @@ public final class Crafty extends FlightPlugin {
 	protected void onSleep() {
 		shutdownDataManager(this.dataManager);
 	}
+
+	public static <T> TaskChain<T> newChain() {
+		return taskChainFactory.newChain();
+	}
+
 
 	public static Crafty getInstance() {
 		return (Crafty) FlightPlugin.getInstance();

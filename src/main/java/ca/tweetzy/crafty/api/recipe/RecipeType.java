@@ -10,7 +10,8 @@ public enum RecipeType implements Navigable<RecipeType> {
 	FURNACE,
 	BLAST_FURNACE,
 	CAMPFIRE,
-	SMOKER;
+	SMOKER,
+	SMITHING_TABLE;
 
 	@Override
 	public Class<RecipeType> enumClass() {

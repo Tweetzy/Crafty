@@ -86,6 +86,7 @@ public final class CustomRecipeListGUI extends CraftyPagedGUI<CustomRecipe> {
 					case BLAST_FURNACE -> CompMaterial.BLAST_FURNACE;
 					case CAMPFIRE -> CompMaterial.CAMPFIRE;
 					case SMOKER -> CompMaterial.SMOKER;
+					default -> throw new IllegalStateException("Unexpected value: " + this.recipeType);
 				})
 				.name("<GRADIENT:3dcf50>&lFilter</GRADIENT:26d5ed>")
 				.lore(

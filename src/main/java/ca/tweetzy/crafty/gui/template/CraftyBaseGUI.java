@@ -22,7 +22,7 @@ public abstract class CraftyBaseGUI extends BaseGUI {
 	}
 
 	public CraftyBaseGUI(Gui parent, @NonNull final Player player, @NonNull String title) {
-		super(parent, title);
+		super(parent, title, 6);
 		this.player = player;
 	}
 

@@ -8,7 +8,7 @@
 
     <name>Crafty</name>
     <description>Crafty is your solution to custom recipes and drops</description>
-    <version>1.6.0</version>
+    <version>1.9.0</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -16,7 +16,7 @@
         <jarName>${project.name}</jarName>
         <main.class>${project.groupId}.${project.artifactId}.${project.name}</main.class>
         <java.version>16</java.version>
-        <flight.version>3.29.0</flight.version>
+        <flight.version>3.44.0</flight.version>
         <flight.path>ca.tweetzy</flight.path>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -42,6 +42,10 @@
         <repository>
             <id>opencollab-snapshot</id>
             <url>https://repo.opencollab.dev/maven-snapshots/</url>
+        </repository>
+        <repository>
+            <id>aikar</id>
+            <url>https://repo.aikar.co/content/groups/aikar/</url>
         </repository>
     </repositories>
     <pluginRepositories>
@@ -73,6 +77,16 @@
             <groupId>com.jeff-media</groupId>
             <artifactId>custom-block-data</artifactId>
             <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>co.aikar</groupId>
+            <artifactId>taskchain-bukkit</artifactId>
+            <version>3.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.38</version>
         </dependency>
     </dependencies>
     <build>
@@ -132,6 +146,8 @@
                             <include>${flight.path}:flight*</include>
                             <include>com.jeff-media:custom-block-data*</include>
                             <include>com.google.code.gson:gson</include>
+                            <include>co.aikar:taskchain-bukkit</include>
+                            <include>co.aikar:taskchain-core</include>
                         </includes>
                     </artifactSet>
                     <filters>
@@ -158,6 +174,10 @@
                         <relocation>
                             <pattern>com.jeff_media.customblockdata</pattern>
                             <shadedPattern>${project.groupId}.${project.artifactId}.customblockdata</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>co.aikar.taskchain</pattern>
+                            <shadedPattern>${project.groupId}.${project.artifactId}.lib.taskchain</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
