@@ -66,10 +66,13 @@ public enum ValidMob {
 	CAVE_SPIDER(EntityType.CAVE_SPIDER, MobBehaviour.NEUTRAL, "https://textures.minecraft.net/texture/41645dfd77d09923107b3496e94eeb5c30329f97efc96ed76e226e98224"),
 	SPIDER(EntityType.SPIDER, MobBehaviour.NEUTRAL, "https://textures.minecraft.net/texture/5f7e82446fab1e41577ba70ab40e290ef841c245233011f39459ac6f852c8331"),
 	CAMEL(EntityType.CAMEL, MobBehaviour.NEUTRAL, "https://textures.minecraft.net/texture/3642c9f71131b5df4a8c21c8c6f10684f22abafb8cd68a1d55ac4bf263a53a31"),
+	CAMEL_HUSK(EntityType.CAMEL_HUSK, MobBehaviour.NEUTRAL, "http://textures.minecraft.net/texture/750bfc9b2cc40f4d8d0224ccbabac26b338aa947d99dcde769f859b59b8d0b0e"),
+	SULFUR_CUBE(EntityType.SULFUR_CUBE, MobBehaviour.NEUTRAL, "http://textures.minecraft.net/texture/ca9570cd1dc43c1e83f36cc4995665513dc2405dad241d2114249e8da976fc3d"),
 
 	// hostile
 	BREEZE(EntityType.BREEZE, MobBehaviour.PASSIVE, "https://textures.minecraft.net/texture/a275728af7e6a29c88125b675a39d88ae9919bb61fdc200337fed6ab0c49d65c"),
 	BOGGED(EntityType.BOGGED, MobBehaviour.PASSIVE, "https://textures.minecraft.net/texture/a3b9003ba2d05562c75119b8a62185c67130e9282f7acbac4bc2824c21eb95d9"),
+	PARCHED(EntityType.PARCHED, MobBehaviour.PASSIVE, "http://textures.minecraft.net/texture/24aeceff5f26dd8413c5c03547c234ac03108d187af0b9cd834a8ce12598591c"),
 
 	CREAKING(EntityType.CREAKING, MobBehaviour.HOSTILE, "http://textures.minecraft.net/texture/77b5be72769ccff1a6cb77c5848e01d7e5704a3d349c0737ff93cb54d02380ac"),
 
